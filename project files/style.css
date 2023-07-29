@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+border: #149acf;
+  background-color: #ab11ad;
+  background-image:url(images/blank-1868502.jpg);
+  background-repeat: no-repeat;
+    background-size:cover;
+    overflow: hidden;
+}
+
+.todo-container {
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.todo-list {
+  list-style-type: none;
+  border: #ab11ad;
+  padding: 0;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.todo-list li:last-child {
+  border-bottom: none;
+}
+
+.todo-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.todo-list li:before {
+  content: '\2713'; /* Unicode character for checkmark */
+  font-size: 1.2em;
+  color: green;
+  margin-right: 10px;
+  display: none;
+}
+
+.todo-list li.completed:before {
+  display: block;
+}
+
+/* Optional: Add some styles for a checkbox (pseudo-element) */
+.todo-list li input[type="checkbox"] {
+  display: none;
+}
+
+.todo-list li input[type="checkbox"] + label {
+  cursor: pointer;
+}
+
+.todo-list li input[type="checkbox"] + label:before {
+  content: '\2610'; /* Unicode character for empty checkbox */
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
+.todo-list li input[type="checkbox"]:checked + label:before {
+  content: '\2611'; /* Unicode character for checked checkbox */
+}
